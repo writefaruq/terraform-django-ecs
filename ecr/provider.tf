@@ -4,11 +4,11 @@ provider "aws" {
   region     = "${var.aws_region}"
 }
 
-resource "terraform_remote_state" "remote_state" {
-  backend = "s3"
-  config {
-      bucket = "${var.remote_state_bucket}"
-      key    = "${var.ecr_remote_state_key}"
-      region = "${var.aws_region}"
-  }
-}
+# resource "terraform_remote_state" "remote_state" {
+#   backend = "s3"
+#   config {
+#       bucket = "${var.remote_state_bucket}"
+#       key    = "${var.ecr_remote_state_key}"
+#       region = "${var.aws_region}"
+#   }
+# }
